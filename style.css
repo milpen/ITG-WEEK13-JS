@@ -1,0 +1,51 @@
+html {
+    box-sizing: border-box;
+    background-color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.section {
+    display: flex;
+}
+
+.container {
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.container__h2 {
+    font-size: 30px;
+}
+/*.container__chat {
+    background-color: black;
+    border: darkslateblue dotted 1px;
+    padding: 80%;
+}*/
+
+.wrapper__h1,
+.form__title {
+    color: white;
+}
+
+.wrapper__h2,
+.container__h2 {
+    color:darkslateblue;
+    margin-top: 20px;
+}
+.form__btn {
+    background-color: darkslateblue;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+}
+#name,
+#link,
+#comment {
+    background-color: black;
+    border: darkslateblue dotted 1px;
+    color: beige;
+    font-size: 20px;
+}
+.container__chat {
+    color: beige;
+}

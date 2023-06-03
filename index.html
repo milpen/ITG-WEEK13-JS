@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>SpamFilterService</title>
+</head>
+<body>
+    <section class="section">
+        <div class="wrapper">
+            <h1 class="wrapper__h1">Сервис комментариев со спам фильтром</h1>
+            <h2 class="wrapper__h2">Оставьте Ваш комментарий</h2>
+            <form action="action_form">
+                <p class="form__title">Введите Ваше <b>Имя:</b><br>
+                <input type="text" id="name" name="firstname" value="" height="40" size="100px">
+                </p>
+                <p class="form__title">Введите ссылку <b>Вашего аватара:</b><br>
+                    <input type="url" id="link" name="yourlink" value="" size="100px">
+                </p>
+                <p class="form__title">Оставьте комментарий:<br></p>
+                    <textarea cols="97" rows="8" id="comment" name="comment"></textarea><br>
+                <button class="form__btn" id="btn">Отправить</button>
+            </form>
+        </div>
+        <div class="container">
+            <h2 class="container__h2">ЧАТ</h2>
+            <div class="container__chat" id="chat">
+                <!--<p class="container__name" id="chat__name"></p>
+                <img class="container__img" id="chat__img" src="" alt="Avatar">
+                <p class="container__text" id="chat__text"></p>-->
+            </div>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
