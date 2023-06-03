@@ -42,10 +42,9 @@ html {
 #link,
 #comment {
     background-color: black;
-    border: darkslateblue dotted 1px;
     color: beige;
     font-size: 20px;
 }
 .container__chat {
-    color: beige;
+    color: darkslateblue;
 }

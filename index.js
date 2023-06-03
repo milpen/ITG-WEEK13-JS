@@ -5,7 +5,6 @@ const input3=document.getElementById('comment');
 
 function userName (str1) {
 let result1=str1.trim();
-  //console.log(result1);
 
  if(result1 ==='') {
     return"Имя не введено";
@@ -14,11 +13,11 @@ result1 = result1[0].toUpperCase()+result1.slice(1).toLowerCase();
   //console.log(result1);
 return result1;
 }
-//userName('YuTYYmRR');
 
-function imageLink (src) {
-  let parentImageLink =document.querySelector("#chat");
-  let image=document.createElement('img');
+function imageLink () {
+  const parentImageLink =document.querySelector("#chat");
+  const image=document.createElement('img');
+  image.style.width='150px';
   image.src=input2.value;
   image.alt="UserAvatar";
   parentImageLink.appendChild(image);
@@ -28,36 +27,41 @@ function checkSpam(str2) {
   let result2= /viagra|xxx/ig;
   return str2.replace(result2, ' *** ');
 }
-//console.log(checkSpam('buy VIAgra now'));
-//console.log(checkSpam('free xxx'));
-//console.log(checkSpam('innocent rabbit'));
 
-buttonSubmit.addEventListener("click", commentField, outputUserName, outputUserText);
+buttonSubmit.addEventListener("click", commentField, outputUserName, outputUserText,);
+
+document.getElementById("form").reset;
 
 function outputUserName (userName) {
-  let parentUserName=document.querySelector("#chat");
-  let outputName=document.createElement('p');
+  const parentUserName=document.querySelector("#chat");
+  const outputName=document.createElement('p');
   outputName.textContent=userName(input1.value);
   //console.log(outputName);
   parentUserName.appendChild(outputName);
 }
+const currentDate= new Date();
+const dateString=currentDate.toDateString();
+const timeString=currentDate.toLocaleTimeString();
+const modifiedDate=`${dateString}  at  ${timeString}`;
+
+function date() {
+  const parentShowDate=document.querySelector("#chat");
+  const showDate=document.createElement('p');
+  showDate.textContent=modifiedDate;
+  parentShowDate.appendChild(showDate);
+}
 
 function outputUserText (checkSpam) {
-  let parentUserText=document.querySelector("#chat");
-  let outputText=document.createElement('p');
+  const parentUserText=document.querySelector("#chat");
+  const outputText=document.createElement('p');
   outputText.textContent=checkSpam(input3.value);
   parentUserText.appendChild(outputText);
 }
 
 function commentField(evt) {
   evt.preventDefault();
-  /*const chatName = document.getElementById("chat");
-  let checkedName=userName(input1.value);
-  chatName.textContent = checkedName;
-  const chatComment = document.getElementById("chat");
-  let checkedComment = checkSpam(input3.value);
-  chatComment.textContent = checkedComment;*/
   outputUserName(userName);
+  date();
   imageLink();
   outputUserText(checkSpam);
 }
