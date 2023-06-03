@@ -2,6 +2,7 @@ html {
     box-sizing: border-box;
     background-color: black;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: beige;
 }
 .section {
     display: flex;
@@ -22,7 +23,8 @@ html {
 }*/
 
 .wrapper__h1,
-.form__title {
+.form__title,
+.question {
     color: white;
 }
 
