@@ -41,12 +41,10 @@ function checkSpam(str2) {
   return str2.replace(result2, ' *** ');
 }
 
-
 function outputUserName (userName) {
   const parentUserName=document.querySelector("#chat");
   const outputName=document.createElement('p');
   outputName.textContent=userName(input1.value);
-  //console.log(outputName);
   parentUserName.appendChild(outputName);
 }
 const currentDate= new Date();
@@ -77,4 +75,3 @@ formUser.addEventListener("submit", (evt)=> {
   outputUserText(checkSpam);
   formUser.reset();
 });
-
