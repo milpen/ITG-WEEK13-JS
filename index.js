@@ -28,9 +28,6 @@ function checkSpam(str2) {
   return str2.replace(result2, ' *** ');
 }
 
-buttonSubmit.addEventListener("click", commentField, outputUserName, outputUserText,);
-
-document.getElementById("form").reset;
 
 function outputUserName (userName) {
   const parentUserName=document.querySelector("#chat");
@@ -58,10 +55,13 @@ function outputUserText (checkSpam) {
   parentUserText.appendChild(outputText);
 }
 
-function commentField(evt) {
+const formUser=document.getElementById("form");
+formUser.addEventListener("submit", (evt)=> {
   evt.preventDefault();
   outputUserName(userName);
   date();
   imageLink();
   outputUserText(checkSpam);
-}
+  formUser.reset();
+});
+
